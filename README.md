@@ -62,6 +62,8 @@ Sales are analyzed via histogram and boxplot to understand the shape of the data
 | Median | $43K |
 | Max | $506K |
 
+![Weekly Sales Distribution](https://github.com/M-atere/Retail-Store-Sales-EDA/blob/main/Visualizations/EDA%2001%20Sales%20Distribution.png)
+
 **Insight:** Sales are right-skewed, the median sits well below the mean, meaning a small number of high-performing department-weeks pull the average up. The $506K maximum likely comes from a large Type A store during a holiday week.
 
 ---
@@ -75,6 +77,8 @@ Instead of a global average, sales are grouped by `store_type` to reveal structu
 | **Type A** | $80K | Baseline (largest format) |
 | **Type B** | $38K | **-52%** vs Type A |
 | **Type C** | $16K | **-80%** vs Type A |
+
+![Store Type](https://github.com/M-atere/Retail-Store-Sales-EDA/blob/main/Visualizations/EDA%2002%20Sales%20By%20Store%20Type.png)
 
 **Insight:** Store type is the strongest predictor in the dataset. The 5x gap between Type A and Type C suggests format-driven assortment, foot traffic, or geographic placement effects. This will be a critical feature in any forecasting model.
 
@@ -104,13 +108,15 @@ Holiday weeks are benchmarked against non-holiday weeks using conditional groupi
 | Non-Holiday | Baseline | — |
 | Holiday | +60% | ⬆️ Above Average Peak |
 
+![Holiday Effect](https://github.com/M-atere/Retail-Store-Sales-EDA/blob/main/Visualizations/EDA%2004%20Holiday%20Sales.png)
+
 **Insight:** Holiday weeks generate **60% more sales** on average. This is one of the strongest signals in the dataset and will be a key feature in the prediction model. The effect likely interacts with store type.
 
 ---
 
 ### 6. Department Concentration
 
-Departments are ranked by average weekly sales to identify revenue concentration.
+Average weekly sales rank departments to identify revenue concentration.
 
 **Top 10 departments:**
 
@@ -118,6 +124,8 @@ Departments are ranked by average weekly sales to identify revenue concentration
 |---|---|---|
 | 1 | 20 | $76K |
 | 2 | 19 | $73K |
+
+![Department Concentration](https://github.com/M-atere/Retail-Store-Sales-EDA/blob/main/Visualizations/EDA%2005%20Top%20Departments.png)
 
 **Insight:** Department 20 averages $76K/week, roughly **5x the dataset average**. The top 10 departments drive the majority of revenue, suggesting opportunities for portfolio optimisation (e.g., expanding high-performing departments in underperforming stores).
 
@@ -187,7 +195,7 @@ retail-sales-eda/
 ├── notebooks/
 │   └── retail_sales_eda.ipynb      # Full analysis notebook
 │
-├── outputs/
+├── Visualizations/
 │   ├── EDA 01 Sales Distribution.png
 │   ├── EDA 02 Sales By Store Type.png
 │   ├── EDA 03 Sales by Region.png
